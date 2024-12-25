@@ -1,8 +1,8 @@
-import  { useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { createProduct } from './productSlice'
+import { createProduct, updateProduct } from './productSlice'
 
-const ProductForm = () => {
+const ProductForm = ({productToEdit,isEdit}) => {
     const dispatch = useDispatch()
 
     const [product, setProduct] = useState({
@@ -14,18 +14,43 @@ const ProductForm = () => {
 
     const handleSubmit = (e)=>{
         e.preventDefault()
-        setProduct(e.target.value);
-        dispatch(createProduct({...product, id:crypto.randomUUID()}))
+        setProduct({
+            title:  '',
+            price: '',
+            description:'',
+            category:'',
+          });
+          if(isEdit){
+
+            dispatch(updateProduct({product, id:productToEdit.id}))
+          }else{
+
+            dispatch(createProduct({...product, id:crypto.randomUUID()}))
+          }
+        
+
         
 
     }
+    useEffect(() => {
+      if(productToEdit){
+        setProduct({
+          title: productToEdit.title ?? '' ,
+          price: productToEdit.price ?? '',
+          description: productToEdit.description ?? '',
+          category:productToEdit.category ?? '',
+        });
+      }
+    }, [productToEdit])
+    
 
-    const handleChange = (e)=>{
-          
-
-            
-           console.log(product);
-    }
+    const handleChange = (e) => {
+     
+        setProduct({
+          ...product,
+          [e.target.name]: e.target.value,
+        });
+      }
         
   return (
     <div>
@@ -77,7 +102,8 @@ const ProductForm = () => {
         </div>
         <div className="form-control mt-6">
           <button type="submit" className="btn btn-primary">
-            Add Book
+            {isEdit ? 'update product' : 'add product'}
+            
           </button>
         </div>
       </form>

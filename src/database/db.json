@@ -1,25 +1,53 @@
 {
   "products": [
     {
-      "id": 1,
-      "title": "Essence Mascara Lash Princess",
-      "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
-      "category": "beauty",
-      "price": 9.99
+      "id": "e23c7247-b379-4ad6-b789-37910b7f16a2",
+      "title": "Molestiae nisi ex al",
+      "description": "Voluptatibus illum ",
+      "category": "Id do autem sapiente",
+      "price": "275"
     },
     {
-      "id": 2,
-      "title": "Eyeshadow Palette with Mirror",
-      "description": "The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.",
-      "category": "beauty",
-      "price": 19.99
+      "id": "3b6e256c-1081-4135-a74e-5307980e9a64",
+      "title": "Placeat necessitati",
+      "price": "267",
+      "description": "Fugit quis ipsum p",
+      "category": "Est tempor deleniti"
     },
     {
-      "id": 3,
-      "title": "Powder Canister",
-      "description": "The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.",
-      "category": "beauty",
-      "price": 14.99
+      "id": "ccffde0e-64f3-43be-ae17-36edd16a3140",
+      "title": "Incidunt et odit cu",
+      "price": "378",
+      "description": "Aut itaque distincti",
+      "category": "Minima et quia et vo"
+    },
+    {
+      "title": "Amet laborum reicie",
+      "price": "194",
+      "description": "Qui totam architecto",
+      "category": "Mollit quidem repreh",
+      "id": "42b8d5ca-3274-4a1e-b445-4409bfc12f75"
+    },
+    {
+      "id": "2a4f2b41-6f6f-4471-8dd8-6a9f34686c73",
+      "title": "Qui consequatur Par",
+      "price": "440",
+      "description": "At dolorem est ut re",
+      "category": "Nemo officia eaque d"
+    },
+    {
+      "id": "14b73f4d-8215-4cbf-b41d-5ef2430633b4",
+      "title": "ewret",
+      "price": "872",
+      "description": "erttdy",
+      "category": "ert"
+    },
+    {
+      "title": "Eum iste recusandae",
+      "price": "502",
+      "description": "Atque excepturi ulla",
+      "category": "Quo non pariatur Ul",
+      "id": "c52a03c5-7e36-496d-bf46-764e083c0a1b"
     }
   ]
 }
