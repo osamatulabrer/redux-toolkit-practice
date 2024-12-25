@@ -23,9 +23,16 @@ const ProductForm = ({productToEdit,isEdit}) => {
           if(isEdit){
 
             dispatch(updateProduct({product, id:productToEdit.id}))
+            isEdit(false)
           }else{
 
             dispatch(createProduct({...product, id:crypto.randomUUID()}))
+            setProduct({
+              title:  '',
+              price: '',
+              description:'',
+              category:'',
+            });
           }
         
 
