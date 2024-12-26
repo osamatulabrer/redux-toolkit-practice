@@ -15,10 +15,15 @@ const App = () => {
     setIsEdit(true)
       
   }
+
+  const resetForm = () => {
+    setproductToEdit(null);
+    setIsEdit(false);
+  }
   return (
     <div className="w-full mx-auto text-center bg-base-200 min-h-screen space-y-5">
         <ProductListView onHandleProductToEdit={onHandleProductToEdit}/>
-        <ProductForm productToEdit={productToEdit} isEdit={isEdit}/>
+        <ProductForm productToEdit={productToEdit} isEdit={isEdit} resetForm={resetForm}/>
     </div>
   )
 }

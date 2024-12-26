@@ -2,7 +2,7 @@ import  { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { createProduct, updateProduct } from './productSlice'
 
-const ProductForm = ({productToEdit,isEdit}) => {
+const ProductForm = ({productToEdit,isEdit,resetForm}) => {
     const dispatch = useDispatch()
 
     const [product, setProduct] = useState({
@@ -23,7 +23,7 @@ const ProductForm = ({productToEdit,isEdit}) => {
           if(isEdit){
 
             dispatch(updateProduct({product, id:productToEdit.id}))
-            isEdit(false)
+            resetForm()
           }else{
 
             dispatch(createProduct({...product, id:crypto.randomUUID()}))
